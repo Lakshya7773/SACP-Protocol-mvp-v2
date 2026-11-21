@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sacp"
+version = "0.1.0"
+description = "Sovereign Agentic Context Protocol (SACP) v0.1 MVP in Python"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0.0",
+    "pyjwt[crypto]>=2.7.0",
+    "cryptography>=41.0.0",
+    "mcp>=1.0.0",
+    "starlette>=0.30.0",
+    "uvicorn>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
