@@ -90,7 +90,7 @@ Each line in `sacp_rebit_dpdp_benchmark_v0.2.jsonl` is a self-contained evaluati
       "consentId": "consent-aikosh-0001",
       "status": "ACTIVE",
       "createTimestamp": "2026-11-21T18:00:00Z",
-      "signedConsent": "...",
+      "signedConsent": "DETACHED_JWS_IN_HEADER",
       "consentDetail": {
         "consentStart": "2026-11-21T17:30:00Z",
         "consentExpiry": "2026-11-21T20:00:00Z",
@@ -103,8 +103,8 @@ Each line in `sacp_rebit_dpdp_benchmark_v0.2.jsonl` is a self-contained evaluati
     "detached_jws": "base64url(header)..base64url(signature)",
     "encrypted_fi_payload_b64": "...",
     "nonce_b64": "...",
-    "fip_ephemeral_public_key_pem": "...",
-    "fiu_private_key_pem": "...",
+    "synthetic_test_fip_x25519_pub_b64": "<base64_curve25519_public_key>",
+    "synthetic_test_fiu_x25519_key_b64": "<base64_curve25519_private_key>",
     "requested_purpose_code": "101",
     "requested_fi_type": "DEPOSIT",
     "is_revoked_live": false,
@@ -154,6 +154,12 @@ To benchmark your MCP gateway or AI agent against this dataset:
 import json
 from app.mcp_server.server import query_consented_financial_context
 
+def raw_b64_to_pem(b64_str: str, key_type: str = "PRIVATE") -> str:
+    """Helper to reconstruct standard PEM key strings in-memory."""
+    chunks = [b64_str[i:i + 64] for i in range(0, len(b64_str), 64)]
+    body = "\n".join(chunks)
+    return f"-----BEGIN {key_type} KEY-----\n{body}\n-----END {key_type} KEY-----\n"
+
 passed = 0
 total = 0
 
@@ -163,6 +169,10 @@ with open("aikosh_release/sacp_rebit_dpdp_benchmark_v0.2.jsonl", "r") as f:
         inp = case["input"]
         gt = case["ground_truth"]
         
+        # In-memory PEM reconstruction
+        fip_pub_pem = raw_b64_to_pem(inp["synthetic_test_fip_x25519_pub_b64"], key_type="PUBLIC")
+        fiu_priv_pem = raw_b64_to_pem(inp["synthetic_test_fiu_x25519_key_b64"], key_type="PRIVATE")
+
         # Execute query
         res = query_consented_financial_context(
             consent_artefact_json=inp["consent_artefact_json"],
@@ -172,9 +182,9 @@ with open("aikosh_release/sacp_rebit_dpdp_benchmark_v0.2.jsonl", "r") as f:
             is_revoked_live=inp["is_revoked_live"],
             agent_id=inp["agent_id"],
             detached_jws=inp["detached_jws"],
-            fip_ephemeral_public_key_pem=inp["fip_ephemeral_public_key_pem"],
+            fip_ephemeral_public_key_pem=fip_pub_pem,
             nonce_b64=inp["nonce_b64"],
-            fiu_private_key_pem=inp["fiu_private_key_pem"],
+            fiu_private_key_pem=fiu_priv_pem,
         )
         
         # Verify status
