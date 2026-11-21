@@ -33,7 +33,10 @@ import subprocess
 import time
 import uuid
 
-import httpx2
+try:
+    import httpx
+except ImportError:
+    import httpx2 as httpx
 import jwt
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
@@ -102,10 +105,10 @@ async def run_simulation() -> None:
     """Run the 3-step sovereign agent simulation."""
     api_key = os.getenv("SACP_CLIENT_API_KEY")
     http_headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
-    http_client = httpx2.AsyncClient(headers=http_headers) if http_headers else None
+    http_client = httpx.AsyncClient(headers=http_headers) if http_headers else None
 
     print("\n" + "=" * 70)
-    print("  SOVEREIGN AGENTIC CONTEXT PROTOCOL (SACP) v0.1 - AGENT DEMO")
+    print("  SOVEREIGN AGENTIC CONTEXT PROTOCOL (SACP) v0.2 - AGENT DEMO")
     print("=" * 70)
     print(f"[*] Connecting to SACP MCP Server at {SERVER_URL}...")
 
@@ -282,10 +285,11 @@ def main() -> None:
     if not is_port_open(SERVER_PORT):
         print(f"[*] Port {SERVER_PORT} not active. Launching SACP MCP Server in background...")
         repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        server_script = os.path.join(repo_root, "app", "mcp_server", "server.py")
         env = os.environ.copy()
         env["PYTHONPATH"] = repo_root
         server_process = subprocess.Popen(
-            [sys.executable, "-m", "app.mcp_server.server"],
+            [sys.executable, server_script],
             cwd=repo_root,
             env=env,
         )

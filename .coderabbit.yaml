@@ -1,0 +1,56 @@
+# CodeRabbit configuration file (v2)
+# Reference: https://docs.coderabbit.ai/guides/configure-coderabbit
+
+version: "2"
+language: "en-US"
+tone_instructions: "assertive and thorough"
+early_access: false
+
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "main"
+      - "master"
+
+  path_instructions:
+    - path: "app/core/**"
+      instructions: |
+        - Verify ReBIT Technical Standards v2.0+ cryptographic rigor:
+          * Detached JWS (x-jws-signature) format (header..signature) RS256 over raw JSON payload bytes.
+          * Curve25519 (X25519) ECDH key agreement with HKDF-SHA256 (length 32, info=b"ReBIT_FI_KEY") and AES-256-GCM authenticated encryption.
+        - Ensure mutable bytearray buffers holding decrypted financial data are strictly zero-wiped (with 0x00) and cleared in guaranteed finally: blocks.
+        - Verify zero raw customer PII (PAN, GSTIN, PRAN, name, mobile, email, full account numbers) persists in derived aggregates or is returned in responses.
+        - Reject any consent attempting to request ConsentMode.STORE under SACP zero-retention rules.
+
+    - path: "app/adapters/**"
+      instructions: |
+        - Ensure fail-closed revocation handling on AA webhooks (POST /Consent/Notification): when citizen status is REVOKED, PAUSED, EXPIRED, or REJECTED, immediately revoke consent in SovereignConsentGate and register audit ledger entries.
+        - Verify all outgoing HTTP requests via httpx.AsyncClient have explicit timeouts and proper error handling with AASandboxError.
+        - Validate ReBIT interoperability headers (x-interoperability-version: 2.0.0, aa-entity-id, fiu-entity-id, txnid).
+
+    - path: "app/mcp_server/**"
+      instructions: |
+        - Validate Streamable HTTP Bearer authentication middleware: ensure proper Authorization header checks while properly exempting webhook endpoints (/Consent/Notification, /FI/Notification) and health checks.
+        - Verify all MCP tool exceptions fail closed and return structured DENIED_* error payloads with valid audit_receipts.
+        - Ensure zero raw PII is exposed in MCP tool responses, docstrings, or error messages.
+
+    - path: "app/ledger/**"
+      instructions: |
+        - Maintain cryptographic integrity of the SHA-256 hash-chain (prev_hash -> entry_hash) across all audit ledger entries.
+        - Verify audit ledger entries store zero PII (only storing output_sha256 digest or 'NONE').
+
+    - path: "{requirements.txt,pyproject.toml}"
+      instructions: |
+        - Audit all dependencies for modern, pinned versions compatible with Python 3.12.
+        - Ensure no deprecated packages, vulnerable libraries, or loose unpinned requirements are introduced.
+
+chat:
+  auto_reply: true
