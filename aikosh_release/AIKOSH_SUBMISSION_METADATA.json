@@ -55,8 +55,14 @@
   "files": [
     {
       "name": "sacp_rebit_dpdp_benchmark_v0.2.jsonl",
-      "description": "Complete 500-sample evaluation benchmark with inputs and ground-truth expectations.",
+      "description": "Complete 500-sample evaluation benchmark with inputs and ground-truth expectations (JSON Lines format).",
       "format": "application/x-jsonlines",
+      "count": 500
+    },
+    {
+      "name": "sacp_rebit_dpdp_benchmark_v0.2.json",
+      "description": "Complete 500-sample evaluation benchmark with inputs and ground-truth expectations (Standard JSON array format).",
+      "format": "application/json",
       "count": 500
     },
     {
