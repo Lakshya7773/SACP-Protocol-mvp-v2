@@ -1,0 +1,1555 @@
+[
+  {
+    "test_id": "SACP-BENCH-0001",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "DEPOSIT",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0001",
+        "consentId": "consent-aikosh-0001",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.232905Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.232905Z",
+          "consentExpiry": "2026-11-21T20:27:58.232905Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..lZGWoasxqaerKOWndJ57fnMYsNkFLdWKHyEp7IADmFfCh9FZjuVv3H9XGnTgN-GfsQC81atp_lP9hY5xs7q7nJVlkaAr6mRJ6u-DBLWS1lBPi0oTQTVz6VMF48FOal_9T11oZRmvbesBuz9D6rAhOizbMCE4P-xjScRPVssEYNycNbcFO6DSW2loNmi9BBtlm5kYHkbCgXPubGM7lrelLDYQgtyQSJh5OqU0DDdumGE7Tsfg4kPDJvXdFBZn1gvc_XvNbsU4oylT87ArOU2IKc1YpxdKUOnlbtrYvLoiVCrCn8ZR6qGpXRofcj6qWt7u56DIq7RcETP1BlYpOYQ-xg",
+      "encrypted_fi_payload_b64": "cyJ5rbVok0ORb+DViQlKpAY11A8oQZVmFaZlVo5p/0yzKkXIS52NP9KESqH/VRIfMfIctEsdFtcrGLlBRM/wIOq1SBOBTKRC53DeqPHjQDx7ZgSjpIR272HNGnIW6Rc95Qg6zovr11TdNc5/ufHwvNBOZuz+OBydy9Rr8v2qT+3Hy1wfXHZ7UrSgb3DgVBfNZJHsw7FTQAyopMW+1gLsG5Zr+Zr1sZaS+mgWZq6mto2ONqpcIAN/o8khU/H+6RWSqW2OF9Miynb/zJAOLY51QUdP7AMAhelywO99GlPn5002hrgfDGJxg8xdhmQKwj5kTAbt6ViJ6tIDb948md5G4Oj7cAIgoyH8yYoSxZQmTYdCvb4ptHAynIbdLIIfsWSybkm54FSJ/NJIpSGb+aXuEed3lN2jzBFJarVbiv+aAIO5zOW1js/oAvrn31/QyOFKiKzgBPUv35Wc4dr/mI5MxDvSb+4beXdsTukw4zLKsYIqV/aNR9DsT9cvGlWq4Fdy17F8lPcLi4ixcsbX3anhi6X0w3GqgowutPl7SlkBdkW+cJhLFtY7BURMCjHhbLVEBADw1gUHK+FQruBCm8Yf+Gm9oaCAet8C1WSjFn6V4dYMkOC+a+529LnRxJH2f7PKdbQc5S5evovR3DhJOcB114PLmzQXXznYBoDgsup7bgBX5dZMvJMO+EeyTDUlg1HD0s7UtNVSsFveBc2zzaep0n1A5pa654U6c5fax8G10PTEU8fqFYesNT3RwfDix+zhTw8hJlI7mdBJJNIYT2L7/2fe6+tCzFcqJUR3mkpk6waDelx6VAlUNueUcsKLmM2rQeZ6bF8GUpTvEPMslmIG8DOimjs9YOV4+i0nG/WkM1Oh3TAyYL4Jh5IWTp/9N2Tjc2p/X08rIi6Y4aO3Icot56WK5XkTHTbDKLVGjJkMW8L9dHzWZgTgl3ek36rza3IooaZMgKeL+de6cMiZCi9/uNviVkzcLkxFRgmEb6F7qR6+eK+4oBVUHA5ZqiHVaAJfjuwsilc01jZS6M/o0zse6LJqRWGQ2YhYp0qNIpvl73Gk4fGG57p06Y1A1/zbOWm+/DWeQl7UHFta1lviCTasLuQXZSQKP3sHCbc9WM8m7vcUJmktcSvvCGQJQQCgTCnhIGK8nRjanohbc9DWgo3nmdkzM5ulHpJcV/RpJw+9aK+I0H42RbdFD/ip6RdqqSlfKCeEmHXqrYMqnJQ5r7CKmAtqJOxiTlMKSoyvnwU+YG/Qy+T0mP+B6f1OsHES7usiYCchJTfrwdOY5BcIxQKZyn/uNeSbEXt3mVvwZUrftHTeUNrhuT3q0DsL5RVxt94wr4PkakvgzYagZybHQGrKjeQ49/xIfHjbbqwKbJ1AdHOpCA==",
+      "nonce_b64": "GKU2coaG0iIkB0Mz",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAk1LNxDvimfSmrrlQkInvjT8hNfUKJiXIm2Ptboz+n2M=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0001"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_inflow": 308535.66,
+        "total_outflow": 71583.24,
+        "net_surplus": 236952.42,
+        "credit_transactions": 4,
+        "debit_transactions": 3,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "Synthetic Citizen 0001",
+          "SYNTH0001Z",
+          "XXXXXXXX0001"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0002",
+    "category": "PURPOSE_CODE_MISMATCH",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0002",
+        "consentId": "consent-aikosh-0002",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.430512Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.430512Z",
+          "consentExpiry": "2026-11-21T20:27:58.430512Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..vU0At8WwNv4FV8WCla6TUvcMz50sOhyWSMbCkK9LOWhZXMLp1DBVtelDgrnuiwtgC_GJbBMWNoHE5_PxfR1wFwuNcZg-c7jD8CHBdmwIrXGOG0xoPp9O0hPofc36Z8ZHEw27x5m_3ytpuFeAIWK7eCkHqSM0TgWRTD8MNngAg3i7I6jFCZfN2ZoxTiJeQnoCpkC3aDLKthguIsfXNHlIYGlz86ArNbp3mqpENWMTHPIf5USJlsZLW3OreTSSd2wgwTDpgFjNYqjsa7zh6suQeZIxkGgs-gY-eGOEvU_Erwu8KBlfXpaGBj9eTpiJUf3hG5z56gIKSUk7zz9HblVoUw",
+      "encrypted_fi_payload_b64": "ysfvhdEAjkYEODig0U9LRsHqP6+aU28qVTyWn4jKcecOg+LDDoDYxERfnvZh+6rwzB3TOBz136BlOTWGA1ALil0lWASJsPWeqMptVsAFs3WzBeJVHmahtgcTTJuHSVrMt3/LphouZYPPpf7QhT0xujnGlFQK49twxUo+QPYUpYcw0Yug7avcFtYrVrfohh6z/WnisCqGFk8QxYog+WABft6LqqxIFipceAZWdNHXMr3CO88jshm3uulbRtk/EdmzF1qSmmv45upxKDfPsfXgVvFQZ1wjIvsic+imNSLyyX2tUzSgOPHzGJZbVyOGxxr0otY7MHxu7arycNc2LcaGWaQPaJZnnplpB9RzvJ5PS5awibrHU0BwxwG2aJg+w7XWVb99gCzUREl08LlTThXUX2zCXtxGZBD2c0sOb18LT9O6qNe11RWfVzHvHeC1QTWnoJtxT+U9VBn0qTgYF7+euA0NyNPElwghgmG8Fjmt2hImhukXzeQPlzR9lfKA/ie+UBdTPfuQFtSbt+QLPzQd/rcCPzCFmKQ7utHOmGgMAD4LL89n8Er1NbPW9DXMIbzL+bhvB3DJEeHzv52T3ikUMq4dyN8JUUYQsQiMAQ1IWNLBYD8re24etovgR80087Ih8WPnl4bSepDT/HpcczMz7vVqe3vYUaBtE+q+oDPq4n1bolDKxviPaZjAYkTYSQxrqkzGB2IhcgfAjKCg4MVYADcIu1HauPdlHegnsbxuWShS5lX/C8OoQNIliTJziA==",
+      "nonce_b64": "+DYMU+UWHBksi9NH",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAAMxXmqbTheEyamMcHq0DgchhxL8Yq4i5BLjQCDDtThI=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "102",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0002"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_PURPOSE_MISMATCH",
+      "expected_error_substring": "does not match consented purpose",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000002",
+          "Synthetic Citizen 0002",
+          "SYNTH0002Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0003",
+    "category": "TAMPERED_DETACHED_JWS",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0003",
+        "consentId": "consent-aikosh-0003",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.538887Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.538887Z",
+          "consentExpiry": "2026-11-21T20:27:58.538887Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..QrYkSyNMve8V-BaD80wmIwr0kS7YnndY_DGFyOdZu5h3HPRhdtWLsIz68zWcbbJm0LqwVDovrmPREav2Cxbn-478C_aOvIp9Vh0GA0SV0v5FXpAIVYBFbPPC_B9N5L4Whh_d0ehGjuiDEINeD7G2zwB0K0rtRO6tFq36ZTwoHHtzofLdwz1w3qppui0wCIbrNnSgVk3nyh_W7V2O5Y9baNYdpGUh9Lr2Qa43OkzhWEJjGsFUH8EGFKkzLcrR28puyPeQoL0DogKAg7EnjRrlTwZFecs3rZ8_I0fJtNf04zwvLZvcQO8FMbmxbgWY-A6uyqHIu7JR_iqTQQmPFFFFFF",
+      "encrypted_fi_payload_b64": "7PRSy9CjxK25oeUStlmWJ2Dm+fbd+R4eqBnFy83ePezOMGcwkBvQ3iQ7PwdgGUP9fi+vfDjX3E7+k71wHbA17Ov+0nDygkefoKaXZh+2EyJE8e1BbLRJP6wkDk+E6t95UTazTyKnRZ9FT8XEBRj5tXfE70eH/bGyIxPvR3Woz1F+IcildWZoGTFnbOq/jsDDlSWOGwmXyNBL+BsLqtnQDqVwigLnWUjS57REyINwIGVFcGg9lys1Mfeo/sQkEdnQoAFRwM3zjjK747+2Wp9Lv2GEDkt0rSS3WcaKwYyC9IkVoSiKP+6i4u1REYWvL8EbR4oFPzAOAt9ADI4ImncPIOwxw9p5YtfkKiPqYX5Obv32gcLWBX+d/A6Wjuey2j6EgI0iO771qZNJkE2SwkrlMDMQ7Xp4EREsfO4tnX9WcCRJbuSZcEKylKfdnn9lLtCiPujmOzEhgO0K478S1QHECBA2icss0kTNRiHqVUPWs4X0e2OGwbg6q5Or/fSDgf+X8i/zReJ3+1erWG1LDf8e/idlpXSpeOUfqG1APKcrhRXyhtjG8uF5mAnfbPA0nyjtO6F73GoXvPVeksFn",
+      "nonce_b64": "oIWmc+TRpORC9K0X",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAEH7bKSDBXyfqUlPJLtAM6QboqfPdSw67MoLM8r/GjEA=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0003"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_INVALID_SIGNATURE",
+      "expected_error_substring": "detached JWS signature verification failed",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000003",
+          "Synthetic Citizen 0003",
+          "SYNTH0003Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0004",
+    "category": "DISALLOWED_STORE_MODE",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0004",
+        "consentId": "consent-aikosh-0004",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.642092Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.642092Z",
+          "consentExpiry": "2026-11-21T20:27:58.642092Z",
+          "consentMode": "STORE",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..zdJtrSci_O5Vc2iVpBTvMYReomuhSzJk5lkWoqPWrSNN4iSyMMNl6NOsMYJBp5329JcqEsZMbh8q7jExRx3FkyK7OLY85uDK5D5NEplte9l_tUymHVm-LkTm6PKvUcdX1IB9g_UAEv7yfYTNe_FXOrhii50c9J80aTUK85Tb4z5cwxPjbEth3hMAi5JosUgs97d-Z3prbp_CfJq8YoiXQLBvsF9iqKv2ifSfYv5JM2VaIyCV9gnOROZnGY_eJv3p0Y5nN3NASD1Tv7g2CzWaV6hHY1UTCXx6IbCvnXrVEc-JjDL8nOqbYy3LLNXhnfqaac1pspYYxWpx0ZFBQAhNUw",
+      "encrypted_fi_payload_b64": "DK5LQwizNkmkOw/9yCmDYatEcnpTkeDJpvcTETUTss3h0goJlqH9p2A864FWR5cH60r0QuoFRlp67YQxfdhFT0Yd2FzabU4u4dMRCPZT8wvqRbyWQsdwbjteICTuV+3yJ95vqbQxo08W/yxhML0Rr5vCxYZ1AKUUYOnURwZ8Hnj017bzWzfj101Sh3cj1JjpMzwB+k4vuKG4vESYTDU3iP9ILtpgdK8fssL0UqkdUZJcvvJm+nSjQShRncChv8b1Q7cdFCdcWR6Iv7Vb4VOAKWVIkv4AM+wou22Uhkyt5KAdF1zXTcDuaA0ssxd5BuII8+mz00+IHFg8qIzE0W1wlPP+G9KiM1pwVIOhcyHXABhN6WdDTUTAyF0rPKdJtECAbirEeT1paAvVjuas1dBMgwLk6XUaeW+c6Z6P3quob/7wX/AuLNHKAS+JfpGA+KLs6a0b0ZLdxL7rvOmLNGYMsE69NtXeL8l9WIhntusEWcgDqwGrH30wmsAWDyYODTDeiPUEPYsoBch9bfA/8so0ja+u+8B5JY7ajTPNEvNQ3yOcghClS2RuR3UfrqAwZ1odLs8eYJNOgFlNf4OFqE2/19ppF4IPZyFZ011K9bZjNMPBsAdsXELynaDh0nYxyn80aTraRBw+R2Uv1Yd7jvBWOMpoWEtdlrZeRiDHHo1ABSCnY1Lf8ciqWcv1Cm+q1mngF7TWtweKcvIXuufYSsNnpN+TY8lbeikfSKbWvBq112JMlNDwCkxEFYoIOOEQCeRaVu9cVzxy/H9nUH0xrjqvWQ9ROdGuaYZK0SH+r0xTcOKnGlqmie+NnH+2ATsBpcXLCfLi0wwNIUTQZt6H1sqYmnDdNtzHDTd9C2kjwzTiABJjPrUrLlrsGiL7PXL8qTv7Oe8qutZwne70erwEJTh849gnEaQ5KwIiAxVhaxoP8yw=",
+      "nonce_b64": "FefAFDjKZV87nqZu",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAfbzzti9BWeOXGEB3SVmDVzpsSIU87C3M3Oovgq2m2CU=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0004"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_STORE_MODE_BLOCKED",
+      "expected_error_substring": "ConsentMode 'STORE' is strictly prohibited",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000004",
+          "Synthetic Citizen 0004",
+          "SYNTH0004Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0005",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "DEPOSIT",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0005",
+        "consentId": "consent-aikosh-0005",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.740142Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.740142Z",
+          "consentExpiry": "2026-11-21T20:27:58.740142Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..mQJmSejjjbeRy_SgQSPTmjwWf5Dr9aJBA1pGGgEkWlLEpvfeQGbRIaMq0COgRk6kI5sqekwsK3fXyX9mPYtMWjMSB10Qh08gRysIW16d854vf1n1MYtcH8d3B7OQIop0TwaUMMMOA4SYUIEBbW3g2PEelsfNYUvP0wu9wnL45hL1wCOUDYAERlC53vogmEllmDcYw4iMsUwfVvC9nFGGfTvM6nKPCjQYuTgUPMGTRUCQzc60tssFYawomOpOpqyEE7bS5CtcIquF1cuSsVP1wv4BJCw4LWfHYG43X7p9NDoQV46nhjmyQ0O4FYnoH98VKCg4Z592a2wpeSchDWhdTA",
+      "encrypted_fi_payload_b64": "vZqw9HcOkftesqHb2q9VRwyJuV2cOrm5w4QV8yflcup9lcF7Ue43cg38VOfXq1XSuz07NOkRgUkM+de1YnVxsPu8cyhNfdcuM5jWAD/dWxEy7PizKxHX/1z9y2XfeatokEfZ95jrZnQOpOCyy2bsayrhgqEKQG5PgQNkyY9uBLIc7BEgowOPVg8rktQui+oiLI/czMm3fG5ZpHbkc+QQxAbq/R/IKeWvLrFfR8p1KhaKPRjLjmwDUMHJfdw1YEcrt7XBgX6KNKY07sDun1P8p1EIyye8WNpmZktBX1DqvODiAkPz0WypvBINEy3foQYlzz6fY+UlHyO4kGpMq2VE2POnvdCSw+iRVW9f2sjLz1S5htLZyvC+d2aywWxz+liz0cKv+3urHxWGUxS4xfY2RLhtuq/XHazS9dLJxsdcfJEK/O6sTpoJON175Vmik+uksMq2lqdnEZdWaggXLoZ6SVnp8iEk09Ti9wcWLUVqULye+FfSuHzYPUxhYNw8qkA4oBsYMc0XG7Vkw4lo7CZ+MTa6LXA8M9aKyDbYrjtqJd3kAZsyVz1nDoujBlUviJxHWlDt9BysrIDw5XrYGhJUSHUR7NPCRkaLEYeEDRHg+9kSvQlLBokB7U6dkQP6uDdsyedHSAeaTC44CNkcFENptLtzijTtlUF5NM0QnZD3CSczcLyvAmk6sVRpl0kQASi6WssKa21IbU1kDZ5alQikl5piNrH8z0MYescN7auD4O0/COndYu6UtC3yzMjr+HFLa6WZklQfjAxQL1o92reQo4r4MysGmzafxbS6FBWzo0Agjboyo3vvFL+0O8uZfdHs3XDGDw7D6o1KbjVjHXnlkbQm4lz/XtAppycb8hU63ymKGNpgEIOsX1ONbjbNC3JfXJ+iQvQvc48TbVFXjU4zfB0W3Z3KxEpKia8KbEk9GO3lU2ZmjePrja/S47/JyQerfBPYeMC4KYYJ11jcGw9Yby0VA5OBIsLsDunACUY30tLD+llg3VLXZ+lY+L5LrRA+D5KW+/hvtkY6ioQQp66hKSD0jvAcM5UCzqTzchGhfREvtDF0HibYvTpDwmXw5YXohFgV+JhBYR0Cd7pNYPJj",
+      "nonce_b64": "yXSf9ugrmj+22L9N",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAMUuc+d2LosOII1rWYjN9gRsOlqEwSuChXNDX/B1tZU4=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0005"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_inflow": 38728.8,
+        "total_outflow": 88689.0,
+        "net_surplus": -49960.2,
+        "credit_transactions": 2,
+        "debit_transactions": 3,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "Synthetic Citizen 0005",
+          "SYNTH0005Z",
+          "XXXXXXXX0005"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0006",
+    "category": "PURPOSE_CODE_MISMATCH",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0006",
+        "consentId": "consent-aikosh-0006",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:58.955228Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:58.955228Z",
+          "consentExpiry": "2026-11-21T20:27:58.955228Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..aNGyR-Ftr4wgWTanbcZB5sLXKfPKFm9GMA1R2Ll0ckl5tQOHCES3xIPGcBilQnEpTfKiYEdTt8CcSzQKDOZPbrJwhqs-2PKHGDGI0Yo2nRoQiU0yGTlwqoPDAEgUdAhRZo7Iw7CpCY-e6B60Cl_mxXCSkBEQd6Fbs9xqTnsumjrkklnRutRQ6LmGmaqbsp1yWRsauNhRrdktD1GhXvzBBdE4egiv_PhTjekgkEjAgs9a-kD2B2Hwe-piuAP2kx_AIiS1icbhHIYCG295O7cqMP71zoKcKeXJrxnaKpAJaFZfdVzF5Hq_0I8KkAU8O3QhtlwE_UiI7gunw5-PlbUxhA",
+      "encrypted_fi_payload_b64": "o7oIbm2kNCaJSOTBWhEHv7AxKRAruqcFW9aR8zzK4Qus/hpQfg+HMgLqGG4mJcsmJTJEbpVMhWrepc+VlI/qWVCrPYj9ACfzPYJ8AUwDr/q+tEY/RpKr3R5NgWuopXhLZC0vZoAR9w70b7kJu073CfNX/hpQYLugiQydMEX63CDB6YIhyHM5C288DrPrPYeGzesNxjGTN7odnN4hizCB2eytSS2k40OZ4m3znkXzHNtN7peJx97DLlpEVaI/MSlE6mmzcs8Pg3q7nL3qkaIpdHDv09PANXssAjzD54sW+XTgCIyDD/D9OcvbnmemYIbyGyWWl1yyImNeivFVgr7dj692kDhQLnFPiviwhmUieqofiaXVg0KB1LtqvhSG2RjIgRmS9ujD/2uhhVS40rml6WhFOihTNyytdfvxmsiwIXZYgPbfBCahVxfhqU9BnUsk/2iIxQIG1PiLmuKnF5BsssAlpoUVyL1qjPxb1aaUA+InoHU+WiJvGdinWRzcZIi4pez9UHiwzllC73IhFynPl98mTCWM2BfndiTSU2XTYLUibLbVvGF4sNX1VnXrVldE67yuOiL0155SyXJoiDevMK7GgBCCdygX7qlWP++yr+pfeXs+nxtB3RmUlJSzcRPAVGCW2AS6pohOsW3I5i2nmT80wn7k7BFtJIsb+eSVsSa1MkYUd2+A0SPOBiIJLeJrpc8D+p+6wMcVFoXH4K0MleDrEDwFgcz8xncQQ9uXgehSyi5HlEMUH9Dv4Q==",
+      "nonce_b64": "nw0CT8lOyd48wr64",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAwKuCH+89cDm78gO7riRy7lecZUYHy0MH6Dk6ETgkgF0=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "102",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0006"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_PURPOSE_MISMATCH",
+      "expected_error_substring": "does not match consented purpose",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000006",
+          "Synthetic Citizen 0006",
+          "SYNTH0006Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0007",
+    "category": "CITIZEN_LIVE_REVOKED",
+    "fi_type": "DEPOSIT",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0007",
+        "consentId": "consent-aikosh-0007",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:59.079231Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:59.079231Z",
+          "consentExpiry": "2026-11-21T20:27:59.079231Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..MAklxi6uNJ540Tl8ehZU6AqayaPfyS-XJuB_aA3VquIX3r4MVfPPU14X3Pqfl4uI5VQP5JhagGAGRiWR04-bUWAlu8kDGjhdfPTBt1rxIXP57Akn7T57Ax6nq3LC5DbQCERRwuHdg9D3khWvyDmC8-4oT2SnxXdIgd3Gh15joNFMHhe6kfkXP8uHS1GgY7NVcKS6RS9DVTk89o_laq9uBcO15YIipHc4BI_Erp2R81eGtl6vFGpqoEHtkdH0giC7KKyECKanP4GRk7lEvBzTd1Gi65TXQyTtXlUQaM9tvgewTQ_4ovhzdVNUwgfwKooExBNTpKEnB-c0LtMbM340YQ",
+      "encrypted_fi_payload_b64": "IyLfq4lEQf3fhSglKWowoeVB5LeJbAeeaed2eK/ABPQz72mvdJ2HYqgquprXQdC3FIO7UaE4dHIvdktSHIGpbiwMd+F3sCjhloLvMI4BMUf5pYooyqy1poHlMjZV9zlhT7pVOY3RDcnRaKPzP//OyKPFMURxVoQv9pZHoS/m/nmxcYgoyBwGiNfp/UzkSq19t+eGX+6swtv0HaYoLrRreBemZrUnT3Qo1BoeQzbFVxbLgpjxUB97ANB6LLXh5O7nkB4dvEiiD5fL4BbAuMlIGlTy/XAs5I64eY59Nz2c23s4ScZHwxx0qQkSa+3wyVSsaxofwdveaiMHWa8gW4tNVv12Y6ZS/hKBGRWKX0sedYAHlx2B0zJYwV9iMkhAL/57EQ3cXLeiGfji0tIn5c5lPhpH0wX4ZXmH+rNwzsJ1Ha+G14BWz4KmEEME4etgDacLWQNqFsw6Dm+P0SEewv9UkYW79Bo37uzWreo85EqoETBsOljHt87+pB6BjoWmDzq0iFWi84IA2BShcLu5gdWy157Ci8IV9oVhlw6tNPlwpZzyCa/WzeMitfEJvF/60536dcFnnnyZIOqSunK/T8z+Kr2S+LGYZXIX/DPnBKzy1jT1JqscTcMg0//T/3+rlYe34wI164vUR1ewSLEfvYTw3URuFwOd3zCiTc2PFqk2nLbq3bMPNA+/TM24I3+evbuJIViT/Z6gfX/TBabcDw06flGPFxUnVFjaR/hgtPhKm6Mhwu2B/g2pp0ZM4GZCo6Ju9nqIK4lEUXW3a0kMESuga/9K8UW3j/ech4klDNfcf7+QVSFWZF84ddZNfWtYvjkJUUiP4RkRHthfhEp/kZjwaaKREMuBO5VVCBjU2q0fOtlF6A7ad/t7jEhou4OClldIkxR6hZic+32CAuCQ4pVrfpnRu/GeWt7VbcILZABR6HaXmDLQhBLLSStHGrA9c+2enh0zCCQ5MfY8pYbJfJFz4rxUSJQg6XvdNVjN14PsJ9ilokspUTryfFfN7gxdzM/K6TqvOij7gtL3ooU2I2h7TwydYQrJJ+SJX8ma5TTl9p3bnQoE21gcaNyHvZrVsmJOjCzO3vrUrQ6YTbC1UZXyg0W/6O5ZwT1brM8i93pA23OQaog9gCHWBjo7eUxysWqW6YkpKfRG1DZumgCB3zZnbhMBXWfYi+zay42w/P417j7Y91k5RaPpOqdyO30W7+mKNO3sbiU/bPycm/6cqJaRuf7+Z0SwaMfI/zmIPA==",
+      "nonce_b64": "p3AjvPnxdqERxzgw",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAgoDQeCtZGcdUN+aY77CQKCy3CXXIs2/S1HqmTtSc4Hw=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": true,
+      "agent_id": "aikosh-eval-agent-0007"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_REVOKED",
+      "expected_error_substring": "rejected by live revocation check",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "Synthetic Citizen 0007",
+          "SYNTH0007Z",
+          "XXXXXXXX0007"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0008",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "GSTN",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0008",
+        "consentId": "consent-aikosh-0008",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:59.207479Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:59.207479Z",
+          "consentExpiry": "2026-11-21T20:27:59.207479Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..eJrVt1mUhTc5BZ_OPh23wHqZS7OrSBqEHQo_pl4jSybff1RI6lNV0ajUx6Mx9NN6PDCMa3Y78wt0vAR5bYxze03-pwnVej_5XJBzajaPCyyv4eJMPUqj4rk7Ji7DJx8jP-lBMKrPPAXuxSBYaNqroVS8WUYYCBPoEdCNxg1KBYw_XrmVtx9PGgMieAy59OIIbkSxqJZjAbKIdkMzZk5eM9ht9Mdd5o7IxIjMTm4Pvy6-peVOjdEy7PAL6aL6PL18LH-PvEenJ61HSrreuWh5x2gfzMfwmwz4wzh9XzolH_GvoCgjLBj2SC7gmTTNF3oTmhC9pf5J4jqoC7KJTCBBHQ",
+      "encrypted_fi_payload_b64": "WUc4TNz+yOdaMSKkb5pHxie1ZVEmuTLlSQXarQ3ym9LVxYIKJxk/gWReBakfl9KcJTI/7Q4bUkI3gxxWlUG6+oaXNL43uHxsRaUejWoADii/fzDJ82qEmwuEsF0mr/Nyzqb1N8FwGJgMIh7E8WI79mbqE98GmEbafjXWdsxiFAhPv1lrClq4E910V+CTOJaf5pNj0e49q7mBX9SGqpgQ4NtvwOaSe2cmcoWmDFitgMZBe45bivogtE/d0Yx8AX2XopNa1mEmk6VpDpm8ZJA2m1p7yZ/afxCt4Dz+Bl4yqf2Y90Fyq6hG9CXxJpKz48m1ZfCz6GpA5yCQl8SD4nOH2aXZSP4RC7NEmZbloNd/2pMCuzqYxia3I6sLqm8o+OXoN1J/hR6qe5ApLPPZuaJv8DoQP00S1cSp2J1f73T0gEk/Rg+IvT8kxbJCxolskt+NG6VUMrItEHonp9mAMIm3ARHzgsl/mmFJPlcTJDchTdCO5zRzVH33M063BmSaQgFbjIoku351YMd4tpjFBwQYfT5gprJGb6Uw00hNBuuVYYM7oGHY1zeYc87h4zGKZ757+MZhiiqhjxWuHCJ+qb0NryH4UnKmi+B7S7jfDgrE3KFwOIBZg8eDDehIWsXmUKQBINAFLBxgtFxkVNIEMM88EBFXwQ/6CK5XYSEJvaibcleiKs2JqizEAOHgKP5SZvEIjbObbrx+XzyGKzYDkIBgsGplFXP6JmobhcFSuWZIMe/nPdN0gtBo0aCZiklQlRqTu0cFnlExAuypgDzih+Wryaw6fjrBnlKZ95Ryv03A8LYFWHZvCNdSKk9WfpJS9FIkGJNjDvtPbErxZoecsm2JWI8SSFaEBgwYS+ygpEej191YNkBH0QhdU5voa47OHlHCfrz0SArO6ORfDIywV9mm76/uMuHlassvBoBb77yq+B/tJDHm2k42u45HhxaOoc3zJCFp0/obzpvmiRUoOxeHj/x/Zt/QJf/wAbJdntfaoNBrcE/4hnF0ImxWVobC/aaSvyL5fC0ynIYxJrFZNImwT9lUTBHPf/PoJaL+L+5ACUrq3KS0YLGAabYf8i/bxTIyqg6v3cdQeyzLsC2jXU1oXGBnunG26FPeliB7OndoEy2pl1UCaoSiz3UTR0SW14p5lmAX6oS/G0Srs9NaQnyLobEkJWmfbCNibjqrcSz5EYbtXecQhvvgG8dLpQb9+8AalFA+bvDnBb7/mMsKmlOTBk8U6WRHF6iE5jnLzK730qRPk0tUVh+fp06BX9uuZ/DtHJHUuPOxqR940Cs5Prcp2zXtBaG95PA1ayaU48u9fwVK+JgEkfYArVkVAz6DqswF44JstJSxDcqHu+Bh7yFBE2szvwcnzGZzavYDtYmWfhCavqZEDIht/45/eOx6Jy6CnBV9uBIbyhEbIdIE7v6PSrz5FxcMZqB0/hb7qZrsSO36RunqCbv762wtH/xX",
+      "nonce_b64": "cbK5/Vn765vQkKe5",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAzrjVc54KTuTsvf3ot4I7ZRHRktoOguE+pwDSjg3MSHo=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "GSTN",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0008"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_turnover": 1057231.44,
+        "total_taxable_value": 888093.38,
+        "total_invoices": 5,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "99SYNTH0008Z1Z5",
+          "Synthetic Enterprises 0008",
+          "SYNTH0008Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0009",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "GSTN",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0009",
+        "consentId": "consent-aikosh-0009",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:59.614507Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:57:59.614507Z",
+          "consentExpiry": "2026-11-21T20:27:59.614507Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..AuBT6B-DptwhXOYurN6FJnaWeqz41rSnW_mrvYHQ47Kegy2YXjnLj6Sha_H7AoyYX-NTHJs0Sidl67LFMyRnsZjqDKKjUNTamdi9XuVFirbwPsxTRaXI6cqQGorUA9Vo3sxmnedS_AikKM4JjWEtFqq__GNpVuOMyDFLEvmRyEC6jWnMDLFWN_5M1lW_w5n1hOXQ568HtymLYbdVPAHD3v9TlhbJMoovCkjeBV-joSZq3vlCg8IUD3ncRqD3V57WiX0ZcKwiKirCu0od6Zm19cpvVZAiFEp1N01aBnbemeyv5CfW2WCcifIn8j-ztRlLy7XhGcx2Cm_R5nPnpq5URg",
+      "encrypted_fi_payload_b64": "zVQZb0bbaTjC3HJwdd26hy4/EfKRoTh2PKb1U32ell26Dot3u1WocGMp0NwCMBp0iJZsfYlXXJBCIyOxEKWMOvllYKvvilENNKftGqf1f0IZQQziqmf/Dwb3TBaKRn0MqWsPU4kbUPpah82PnFn5RA1v43J9K/SO0XuvA1YvzUM/JUlxIGqaYL0ZvADeX9fI7oU297BJNghC2grc0+mL43kM2lemGrw89b4l3CuClB8O2D7azizj+EiEtnV1rK+V1sfgV7IEAqfU5RZ+YS0DnRxcthsj4768P0o56q2Xj3tZfPOvj2p8H+i9gC+LDHWCVBeL3UKSDN9WJBiQeUcZMlWU2vOCJs1uv95K4sIXxeviMY2Kxc+M3+PH777YsD6wbTkWCVE2x9YcAA4/hGe4nk/ZeOrKpswf7YQkj6bH5WuCoJ+AysM2p5SLJadvSDxkNw0Jf2tP9PKvM/ycw53r8HSWMzl1Fu9myDE9S8BUpyx/U/myUCSunR6rVWVb9AdLCBK+HdRxGuoivswX/eypzr9xvEIH3LGNLZIA83fqdOWkKzhahU5W/0A7b3heM+hSRDY87vCNsN8ca+Fvh6QSQALhBjfSZho4SNfWJycUUAhhprgphF1p80EMI7kBKUs5PjL1JEd0x28uYnKAcWtxAyRgXI0gM3T5NRmPKl/y4qsvv96FE4knSyJ/dnF1g0SbUACSbd6XASmz/nW+nv0lXqh04Crm/1u/WXMphvfjlsOB4njEAOCC3ZF+lC29TmQCDyPw6X7FcSzV6126ceJgVIYiXSg890zBkwUr8kFWSuj74BEE30B+Qlv3vTHw8lIqnmdUe+B5a2TNyyAzEtmKIp0xrpQq5jVzfbeA/1MLuN7Yr0g+D8U1OAcNJj0ESK0yJP1HZPPJi98F+cjH6S2s2EAf23KEiHw1pCQXNMm5XKxuRCG0ToHbP5VljGfZuxF9AZkcyr4XQDm5xEpLci21WT+Q9Ti4E6I4GJZnVnzrVoVtjE5M0n5eWeDvou4azP6QVr4MFKhhlDerI7woRQq+REo1yoLy+9MlWBwuYW1Pws0iWAgcbke3OqXDeMWppF9GiOZfSMl4ujOPXeJ66CSGZgT+LPbP68+iOs4DdSD/zPyOE3ql8DAZT/1j1J7uJrX328RR6tcip6FoqEm2kookoeJomJEpp0czE+BhzjpoR5iFteaD9+xtjZfriSbRqHt9XPCpBV5CP/+hof5NjioMtRm0zCq3iNBxFgbkxlVu6eJPx2LDVfsp6caC1w4gxQSKCmgJMX13A3nw0XrLoXOk4d6cN99MgjW3akP0dpGFZBxk6aLAuwKohleDiUSAKZOtmq9ovOh64IFsBK3Cf9Se1sSe7NDNebccxjoeDlK1T1RcZcFm5F6d9EppMTyWf6ZGmANt4EkENt2xtc6Voa70XNvbpFaM/vABlm/CysEJqX2G+AeM3TSlqI7VBPOL1eKRfwcn6pr7+s/6W5BBjRq2T/GmeaSbjsYPRQ+0k/E9hjTQv1mbAbp9Qchdo1T5VefWi50RhMv0Wnd1Jjkxs4QePh+QDComghqgvXthF2qP3wjWvLUFFyr+dQsq5uTtm16F867QX4G6qVWW9+CNITMaII72H9PuKar2C9YYNp+yWwjGGvbQLvou26sdNqHUDIyEXthHCrWLRePaLXfdrhm2G2tpYd6kHP1UnVzF/lblD9k=",
+      "nonce_b64": "EfI0f2SsBd94dXiL",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEArE8wMdtZr4Bhqd57H7Jd26DTqUT2WrWW1+7ky7ZSlEg=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "GSTN",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0009"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_turnover": 1138253.75,
+        "total_taxable_value": 960947.59,
+        "total_invoices": 6,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "99SYNTH0009Z1Z5",
+          "Synthetic Enterprises 0009",
+          "SYNTH0009Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0010",
+    "category": "EXPIRED_TEMPORAL_WINDOW",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0010",
+        "consentId": "consent-aikosh-0010",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:52:59.868679Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-19T18:27:59.868812Z",
+          "consentExpiry": "2026-11-21T15:27:59.868812Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..NIRmtudG_O50LS5oKCH8pnP2KTC161O0y9bN2T4uN4yVbyV5UvX-LQXr6rGx0cPBxnN6PoL6JhzffIsRxf_3QaGWJXu38qaYl7p3yeaetgBpXhM3Zu7uMg6fvgpl3fTnxorQJTYpHWC1f7Kf1rMSUcrAoeF6A2Udp-jL423A1U72pCpDAD4EUQCNaoKTnAFLrDCja4WqBA6Ir2bO2ZkW7Wel9YhqVgZ7ZVSmQ-m2FXEuvTMPU7YLWzXaMVVPsj3ZClGH1v0tyubjX6RXkZqpFAet9DnUSKgbAR-pe75v-rEO4kKZ_-zQf2bHn0Qn8BtHvTUkVHcAFRuFFO16R_A0sQ",
+      "encrypted_fi_payload_b64": "no2Gvrs2Ogg9Qp0zYXuwSCr2jDErJ1G279dwbI/PlTk5MA39U6B7hUCV0xMdbzU8jgIqquQG/g00CtjOmi7nPhV/hNrnECkoqgR9LrJUzr//3KnluoxrkIOvOOIwq+NJIZK9yNACWNS9F8bNTWiSlgvWAJ5MhZY5TniXgi//26cs23miy6uqsJAZrvLDyGTnKOeoZ61+aWTq80RIJFH9IM0Coh6pfawV1XUIMLES5Cn97WRybDBP73zoEj/ZXGas8cgWnlORmcP/APIVkwF6/t6CwPrxLOEyYhEpUsH1l5xgkPs7d+8APZPNUNQaVrmNlV1vz3nIekIH7AOLqlQKjFGjN/GMDPea6IoYwdl2/tIpoWxeMVEhDvcTwBjtMcxDTf/C26tjYFaOpGmU8NqB+wctF5yJnBpk9IhCQi+zfIQ67Lfm3mIShRQFWu1gXYxQjwdTgBvVXANhxUzfpahv89QSyjMIrh49afQ3tQsv4gUnAMDc0dPxdKomS9e/X+u6hTxgdlYp1jntGgH6xftw2vyb8h6fyAnb/esNxQeMfxiKRNgnD3nCXXI2YMkzf/7yrP7bzTGHT9G6lZ+9eXTNHAsz7c0Mm6pSh4nAFJZqcBOTgFum+h9pKOdUsVxr6LSqutB95J8DPfDPP9GIeazTuqgTKGQuv+y8m7ThYel77FWk4CxL0utQ+yKvsdTpyEHu92nOj3D4pES5feF+TRVAjldLz6aEU07TdktG6+N+d5SB7+pDJUP4sAGCY9Szpbq8UtrJvh3/sgCfGNRR7E74w6tc2X7EKvOYOx+wZQZmju5xhD5iNSMZU4IxllmMysQtYfsE1vHn7d0u/v0BeAcTGuLiWSWeKA09c4jbvPrHB3UmcMtE4NR9u1cGjqglEZJ8upeiE+ntf9uOyET+asE+Qu972qt8oDCs+jBNhg8IlNU=",
+      "nonce_b64": "QhH+r6IHK9voZwrT",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEALp3V9tf+NrvYoWeZntjmvHJuMP48h8nA82bok1sxGHA=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0010"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_EXPIRED",
+      "expected_error_substring": "Consent expired",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000010",
+          "Synthetic Citizen 0010",
+          "SYNTH0010Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0011",
+    "category": "EXPIRED_TEMPORAL_WINDOW",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0011",
+        "consentId": "consent-aikosh-0011",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:00.060642Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-19T18:28:00.061568Z",
+          "consentExpiry": "2026-11-21T15:28:00.061568Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..W6J8jDqJ2Gs8-AFfkFNXahNLBc-VyPa78I5RsI-1taWqChWghVD4WnHMed7XH0Edu3Nc-RyGDi1qu0ys05OV_YcBWre2pNUnOV6lVhDyrcY9Renn-gJIFU52jqIdcg8px1bhz-DddhAkqCU4LUbO1uDZuzqedtzDNUUE6A35YizpE7N8Y8ay5pZKecC_qCBK9z6IWzasa818VMkHhFUHYhSvq3R8WKFPLNB50WuQco1igYp5cOYFit8FKOeOEAMgKVoErulWas8urB9JpvFUrSXnZKEfTz4rdCQ8nTs10F46BjG9llYpcKMlPn10sG47hy-DSCgozZSOnU02ixza1A",
+      "encrypted_fi_payload_b64": "gBYSHmCmwaZ3Te47n9IjGjgessEDV8E3H+L1RtAl06aLfuGNonE0QBnBg1I15uk7Nv66tFzfK4Q0mnu8t53c/xfoaft0jKyKVYzXnHjdhKSklf7NJVLXbv26LZlW3MwxtUZ3GjwT1O/7GwclM13U2Kc5+J2VtUhcHwyi2GFrzzYWMmbMXFt6aZWi+1lj4EkmsOnPyY3xzO30yl6H56Ql/bhBhl3dmrJCI0pD0eTnWInUqj03pMP2olc96mTT7cyJX7LBkTQYMQ7a1Ld4OuHQRAQlWhdEHpAo8m/uQOFxktTKwmHbnhH14RvTUuIuphUP12SvtxAFLnHGlWHhffZXkD0oBbWOR4/UbNAE7U2D506jbkf1wt8EIB5czu9mH2qcxQQ3QhPoY2Hglr2aN84Y0r2XWjLBaFiCGrH/V6KT83uPPSw7hlliqJNZgcRUcGfYJIO0jbGNwvoWg60IyMatjiIIGfVmRhlG5rUeS3ce/v5lJNpeQzQAwuRfL3BGF1hqksjekuc2VQxEx7uJqTaddEllv+q5W4Ds7gkxLNogx0u8KROVGp1RE7iMt/P6uDofzpHl4dopGgam1yQ6Fhqjt/UEOqEs/bCQwsUB+sTjF5SqU6iQpOKNnJwrWbKL1hstAHlC4rIl1GrOsoSKi6QZRrhjKa18XQYGW13g8D/70qw82HPNXT8TaAokBFTZSFU/FRmz6RDAo19AdpwCFqHykBoxeS4PR7LyeE94k+piD5ySCL3vcP9vUptXbg==",
+      "nonce_b64": "9P1LsEYS+vJMzd/7",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAyZ7NZzvX+dAai/5ix6nnoO2Xo0SQEXJpl4PXlQBLyjA=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0011"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_EXPIRED",
+      "expected_error_substring": "Consent expired",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000011",
+          "Synthetic Citizen 0011",
+          "SYNTH0011Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0012",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "DEPOSIT",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0012",
+        "consentId": "consent-aikosh-0012",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:00.205242Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:00.205242Z",
+          "consentExpiry": "2026-11-21T20:28:00.205242Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..qq9FS_Wcr-Hq8FnVeyqJEyzUR7ky3D9hu7T0Zi-KF9JtM40bwS96cSWqlJe8cP9Wdz7QuUpu1-2QOM-JOlpC9jULKbQWFS4WslihSGncj_XtVtkaD3UVe_RTow0Hp4A973OPaWVoHJ0mz2qnoML4diJyHV33N07Hft8orYbTaTEb7CsnqSZJ7iqdzi33t4gF67OM_VR5V-ghwlAI9zByqwlBZKI1YwgCQlfBQyyRmPDWAoXKWbETPHj5oO7-7nClk5pWr4zJdUo6SxGZXllq3VEtVDKVZJXoZA-lJO8LW7cqnyF2hYvnk9EnP0C7eZGW9oEhiok6uk81JF-bNUpJ8A",
+      "encrypted_fi_payload_b64": "RkVvk+JQJpCCRsFvL6mhxygqVX58xX8ODjitddqLOgwgxKIimEf8aqRiPXTpvNOLEBfKPVKmDFgKkof3TrB433AdUisBUiQwlcJU/vcXiidiJEDs+fu5X7PLPUJDsUi3Yqf02Oh77P8ZkYPsHptWKxgPpN4Fr+thFfhX1gvtZlBF9Gq9jjYs82G4p3NrqJ2rxcPmk6HmEJG90We6A9O3NFpXxcFMpFZTuCAKhc+Ym37E+60GwdJ/U3bkuMjxvkJw0vuwE/bIrVlgwuIeDdcz/C1DssXN6AuJFKLT1Y9MGFAe77iBbVyo/3rX2o39TqXH5aFqythLGlV3bAr9S9OY55vlTvABQblXPvn+BR0vdk/+6y1tbUhyrztAUJ80Cv6mGSFRwtl0waVbjRp2EfI+lN9YmIdC57c8DsR7UtGipgkHFefN4yNyCYBfTpf7pTHNGnmA7kpmAPvyLQgMdjIS8pUEq3Y+L6GBzYEZac3OUFjcrQWbaRa1a6jaDqXWO4iW2vUWGmAeRf/N5a9howKiNjZ+0WoIlX8ovCfqnfNlKg/bhKDsbfk+kBSgOTKJc46gkFRp1rQQ/tc44O8C32RQ/e5V1j/pjbBXbtfJ66f1GgKcKZTxF/H2HoGi8QaS6Oea1GFKny9EUTm6LyZdM41O38HGe+qsM35LkpeOtoinj/uMWnA7FrM/+CgrX3puTObJfoKfvpKyFeS0GpVteJFQcgm/MjcagytSYpQdCmhCviFyK6MmSaAsvZScVPls0VU5PWJ7KMaW1gDaG+lVkXyoxg+cothARZq/NTwMvpY2Gml8awlJh+xPbLxUD2PIzC0xjIQK+lF/FT3rMvBgoI3OK7cch0Tei8f504ykJTkyXAXWF6vlrZrzLSAAhzR1xETvZkWM6LFEJxT32rAWms3gvybtewVrdTuh3QP7VlOadCrUVekT6x8nB3p0P7J9FCXppgHOrHVcdCG88TXEOz22CzSZ/naSiFOgNQQHImPnqtTyAHEgRdUKXe02ghB/aN+3BkPEq21AmWhK9EJWbf09acXUSaRKmCTW2QRFGtMKjcyn6Bc37/epG94hqwbRiou0a2jG1e2d9sLMk3zDHS0w4oaB7cmDguOdKw1muNrKKEnQ7NnRdcmCp6bWluu9oGUwfOQWRgJjoi0KMXy+rn+9cHAsJk0gkIewp0SDiI0jeqposMRHw651HFt4GuwVpgsC5kkzWepx3QeVESvHNwNI0MiGpDtQPtk4846q7/JgIYUg8jlekThrK+591+DdMOrJQVmTC909MNjQzrLqYC7jraJkYCG7mrYgCNIW2SBTngevFGbeKJbgAbMhZLhFLF8rUErn36yCacTIk8xmt4QUdqkDPnSpmOhNtU9PjYppiXs3g7g9t3vLMpONlfGwTEL8OGNA1gvMJV6C3uHEHQYfMf845gOaqj7BzXW7jEtNqQwWyO0QxmW1ySbYm6lADwyBYfVWArccAvmzOsNvoQc1il89ZdfTkVkj2aUIVW1U/Po0R5NhcGnd0+NWCnGoug6vxcdOjQ==",
+      "nonce_b64": "J9Smfz/rYfP/R/rY",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAhzbzRbhYSZRfs15ZfgThWzNIgsMfykx24FGa1M/cwyU=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0012"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_inflow": 317681.0,
+        "total_outflow": 55218.4,
+        "net_surplus": 262462.6,
+        "credit_transactions": 4,
+        "debit_transactions": 4,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "Synthetic Citizen 0012",
+          "SYNTH0012Z",
+          "XXXXXXXX0012"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0013",
+    "category": "EXPIRED_TEMPORAL_WINDOW",
+    "fi_type": "GSTN",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0013",
+        "consentId": "consent-aikosh-0013",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:00.762273Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-19T18:28:00.762414Z",
+          "consentExpiry": "2026-11-21T15:28:00.762414Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..CpUvu8ILxquSBXbT1BKjNTG2IrBnd15wXcIsR_jN2FL6zoH5yeGetQ7EnlM9_uHfv05cZzBOfJ6_1d8YRpTXU-AKpZzP7AOe428I7o_r6U3pix6NjUf_HYl5V9ZYh7ZnAkSLdaYN1FCeLfmHxjpiMKPyn_xIw4DhODM-H_tXNfyaCDZu_LCJNxNuVZb74dVn_25ZBOhZ7EDz8Lb8fcnUcM350B8L1U2412fmW3hdlBU10_yXfhiV3i5Umy6sa6fAyrvvgqcUITI2-8VlhMhjgerPPDVVXboJ0-3EkyGWpRDn4QBUrarh-URwf-D4_Keo2msS-GcZ6RQ0Uc0Y5eyjMg",
+      "encrypted_fi_payload_b64": "TPlVtVuTU3JCHTmV9hX4SukFlGwMQ2SxHioge+0xV2LMTB47VzOVADD/oOY+TNTuPetML7RVWiFK/d2JbSGQWPcBpyxCOZIdwgDz57KlWyaNrx/SWghYQO/K2BikJuHLYkFNFbGQkdubwEIlTrGQuf+odWMGSDzgGU3Q4r+vL3oYilBHFb5ajxFW3eHpxmJ6FYpKbTm2lWEJdNIMGy9+wKPz3V9t+I2ZtF8+uihrihZxAbPzaoKGo/iC/hXLzSie4TLXExLnvGva1CdX7/CJiiioseL21204uwL5AYMetJK5LAp8wej0oInzjtD/CKiw+DjYTCDkcbFrtVO0ecZ7JZMhVQ2OUIkNvzA4zkVzgVnBCioi2tQj/POFM/1EotHrUk3Yu+01mDnnzq6fSr/91VNBn3lwrl0HLrXAbCRyY2mvTWCD6RiGq5imWvWesoAxkv6EbumQr2ryCV6fzXfYOWaaTVSUv74Y3bME1e1xhuNzzIeAswW5ZRBURoPKmseo0smCQOjMgTLgJ2d9x7lZ8YUl7NmiwG59kmfxi9JQFFkA/8G8QYhWjlSQp/bJ87kjAHD/wfEaDeRIqk7wDCroSYThbwBgkjVXYrx47KAW9ro2VY5pgBrjQd8fcwxE5ICHlw4kDsRrujG0RJs5bi/zUCxpHuvYkcZ32Ji/Cw7Wu51xmP4oiQOBHD9UzCsZ2mAFTdwXbKxzUKZpHu3hd+T4BBxguvokrLHrR7wKmPrpj2QpraFqWDjhfXpW5oph8Q4HE3cQlX9ZbHCW56vVWaFsPl0bNKIZORvshoRbzGwrS3CKfF+D6f//YA1Kda4fHfHtRholLhASqH3mdRgPHUJeScLrwbw1oz+7XqGbj5CRiKRgg3DoVWVL1iEyWJZTM6qd9liHm0Vup1qUAPI+a45tLEG53syw9OL/Bn86gtxCK/qeIRmcM078JBBcMpO45X931wb2eu4/Ne/g6cZFeOmDKGYFMV9t/toSYDiJzSs/34uSuitg",
+      "nonce_b64": "qqcZhS8jOJQw/68d",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAD37/wBkY6yEE2/ZfMMoTsVttS9nHWiO4cRwGSOLAoGs=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "GSTN",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0013"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_EXPIRED",
+      "expected_error_substring": "Consent expired",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "99SYNTH0013Z1Z5",
+          "Synthetic Enterprises 0013",
+          "SYNTH0013Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0014",
+    "category": "CITIZEN_LIVE_REVOKED",
+    "fi_type": "GSTN",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0014",
+        "consentId": "consent-aikosh-0014",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:00.908412Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:00.908412Z",
+          "consentExpiry": "2026-11-21T20:28:00.908412Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..zDQ2-YE8bNIMPcUy65wozmMEOsPkD_CGppqGDv2blCf1Ccbcfh6imOiGLVkjAeCPMVuRfh755YCPSoBTkvA-RQMGKXpcZSxq5fSCY4Ou1Hshqe-l4BCR3wcsvhz_qwF7jKEQ-1ZYyeh5-t9F8O14i-VetYmA3n6d3oyXyu1GhhEulphpEsZq-_2P4xVCZoUFD75yq8WG5G8zPWtYQQeOSCqje94Ue3-IfYSo9t-4Eo-gvh4sUop6ZGVPSwMtnUQ0LlQ95IAQf6uxY6QEPe_gl1llwW3J7D6rzsR2EwqD9dEzXCGexloH6Pr75AaYhl1DR5i_xvvMcPBdC1gefzkoOA",
+      "encrypted_fi_payload_b64": "C0Y57mRMlnfa+5yxxxa4VUu6kKrCNQAGEvL+COmaU5JpvJzmEQV/gUwDHVZsiU6tykMELCo5fjW7S+/oMGTjdBxuShCU34JyLWu6qW7Mw6E7yjB39NJ4u38yM7lUBgfPSS6n1Botp+b7su8f1Qv5BBsf5c+eLIrx6H+6roSDwvzAmrW8ECMuRSECQ20ydcurD0ME7zao4DZ3Zzqu/dxvwYzLVuU+R54SlNLFlCC0ER7Tro88oUrW8Z3Oir5NVd+Q5uL/cI4wgE+XmhCwLRMGP6lIPxpfyeAn5/VuQpip3Rfu1QH9Vj5Mt8kgiJi7AHiW2SR/afsHhB8eMx1Dq04uSValExuP6pAvpirbZoec5yIS9K/QuBpcMOmDopVZRt/ZTp8AohDmDncdZqdNLJ/Tl/AWro8r7vQwN5528pPVX082zTwggpeP/dUa/NxebroeLL/78y1o5FRitom9UxMeo1tLdqlqySknjCaC9dh1RbBhliv9+zd4tGwn6SgyqmsMVD/6oHr+mCE2ZZ5HXNFwF65w7nXO3Hjb5fEnVcQ6507nPHCLYL9Vg4CaT0oqCfQ1StNoGZGmrAGbstWpbcOTlTwGAY8GsP9JIaDlZS+CARcnoUUVpla9sz8kIIgZuByL0r0CzdZCrVocHalY45tRM64cOgqyiw750c7IcHOgUQe8+LCAzTUhPy9QGG+kMzMjlV495pOZXf27LS2ukEmzw5pxBtFsYE6W++zpD3PBucX9QuK7HuKmfOxK+TIZqTJypSm51MLX+DbOQ9eUoLTqE3CRqESn1E4mjNsRVQ2SGjkVaVoVssCxttbkLdftdJf360YozNyJKHtOCnc0zaq6jmMY3zD8gxyM1haFgtorMumUyBo1rhqcRJ//GNuCiQ/ng61BQMc9ypKjwb2Hx5QUi/G7qjRFHDl9ALjSPAvOP1WvI9vdkBgEqRE73CtVDhfxmfeiIYDvSDcKLHUTIXGvRHJKzWbp8B5qTH6NX7fG0fqKVgFWBbCNPHTMV9wPXAT/DvPJQNaKx/Jlj8NcmjdpaSyRuhJzTIWbNXbOzbEHIl9DI6jgKAjRb9EC/binfacQv5JGUQxXnw3xULb96vJpO0Fitos+Bgu83waJPyu0F+wi/Ymftibo8LCAZ3+nviBhL30LyXiTuRL3qJn8WybI9XCTKnCmNeYKRFr1wiuvPtj3TXqKRLRcMPy+vE+vOhzNdGzxlTtE8KYJqThJzZh14iZFpg==",
+      "nonce_b64": "rAIQHaM5BvAMtihV",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAfmKr9Dwu/RyDOPfQ3NkZKCTetuCjs5QIzqWWMtaMxA0=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "GSTN",
+      "is_revoked_live": true,
+      "agent_id": "aikosh-eval-agent-0014"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_REVOKED",
+      "expected_error_substring": "rejected by live revocation check",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "99SYNTH0014Z1Z5",
+          "Synthetic Enterprises 0014",
+          "SYNTH0014Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0015",
+    "category": "EXPIRED_TEMPORAL_WINDOW",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0015",
+        "consentId": "consent-aikosh-0015",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.005285Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-19T18:28:01.005383Z",
+          "consentExpiry": "2026-11-21T15:28:01.005383Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..QiH64mv4okOm38Qtbf_u9exKi8V-9ANlsCuEehI0X2zdcvXvdDwvhjLAdLcqPZzASYhGvYSaoJymfuDGqKfiGu8ifsiMCc8zwcN4YvMRRlZ8LpNFXiBp6ap9uPCXNV4UVKUmDC6e9Ekz7dOxXbams8f9-y4UDguHChZC8y0RzjzzxpdDiogBxaKSyBQvvs2RUHlNUGcq4ODTRADPKqhU-Rf6asHHL3UTkRwMGQ8jdBykjZ6eyhYkkeM5WjuxNMXJevZ0o9w9Xfcz3icDEQa4CkQMj4js0lkC9Xm0PXmZ1qa6qQRVoXSC79VTdxuAidGoZcQOt8L2SRfSaQTlURKong",
+      "encrypted_fi_payload_b64": "+MwTAIqNzvcTRuXuwHqYCEhB+PDaKp49r0JMZtEoD9fhgfzfnicpxFvjXyD63bq+QKDqpk+bCZUlJ2lnTi7PDzAuP8cM3fqauKfzWFD5arm+kN8MObKRTNrKEHCzIBjYOdHrvEE2LVLVT8l8W+6NTmnAhmHBJef58V9Egb/PE6E3wCDz0DXq7i22xYNx2j9pnB7t58g0kLaVgin5YMLEkt4Wyzacmacgwf5b7FCa9iMEvbklh6rzkimnCIWCfNEDD73xEelJBhVGPS4N+pfjtGNqk0jKQDK9Mhv6LuQRmUCTUN15F8uh8k7tdWba305qUBn+T4fGe32X0aGjeoGSHZdRfF5wh0NmtpR9AjHhWEORVk0BBe9Xp7A+ozw34wKN4/Lyv+D4GH5lh1Ak7L2xCt6vpV7DICG2HZ5iElWQ/0ItDpfDB0xyhKRsyNJUZ272hwdWWQrqoajAjm0kMbHAhiIcPDw9u+UJKaXt6ILIqp+qOIWaYoOsRJqrjVpwP9wyp7MlrgtzDcuYsEb169PXY8V5syg3Cq5SvM8XreaiRLXa/CQPieuMa+gEuwdcJK2rsHbCKxUvlIFzOA3C",
+      "nonce_b64": "zZkWWItF7+mdv6LY",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAB+XYwjVAYclcsQYb14NKEi1gd6T/ffv6uMcA8KoP7W8=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0015"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_EXPIRED",
+      "expected_error_substring": "Consent expired",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000015",
+          "Synthetic Citizen 0015",
+          "SYNTH0015Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0016",
+    "category": "UNAUTHORIZED_FI_TYPE",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0016",
+        "consentId": "consent-aikosh-0016",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.113543Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:01.113543Z",
+          "consentExpiry": "2026-11-21T20:28:01.113543Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "GSTN"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..TV05RFCkSniZVeoMl48GwU1UOxQPUsPySemXor7FVAFtLdEA0vOC0tVgDfr1QRw1AG_9p_QfQyGejZj6ni0LtFUIpruLqLNmss_sFnmDriYBz1Tm-HI2NRe_MPotqpe_iw8LXhD9_4huWrI3DbHWeqyuRpaq4tFtjAun39yZPCAOtzMaue0e-iAbi8q-kP0-FvCV13buJqoRD36jqwJeEL4v-TCCvFZ6PLosKJln56bAi9rvRaCCKa1fG5NCp2vWKczAr3y6iOU9eGq35w7q4IkJ9TVKIYDC5IIiP-bnUnI6HCcV4MY_NgP6h-14OzQ9UBJWmGzJEnnMoAKko_Fxpg",
+      "encrypted_fi_payload_b64": "zhYmI1FebUxskoE6AoIpWyN3ZquJul3v4hma30jbiJT2AMXztmB/RcMEzHqS+6OZrI3SrmgkpHDNjH/pGmfwxwL6eiuEdOjJd/kwDisLqO4NGS/hhu6fxfrqHX5NsACcw4R9X6BIZFQHirPJ4jeUHp6TCLuCLZqCxEil+w9HUIHfQyWAt15hvmK/GJK6wHYSL6Iz7ehnIS5+v+rguvSeYezyuz8FUtyuRIpz6TORizr9PMOLH6+fIWb5j6UaOmS2xSyxxZUw5PK8N1ejzu6ObhITVXXs+33KXKC97qpuT92oP7j6QzITB7TbmZDdpa+tgpFQYnwYOlyvM93QpKPqQ1tLscTRMv1nV3L8H4iZnjDbwgPTYaOEDie89UsEwYmnfsIjuORO4lcDHX6KF1tyxPI8M/MO1ik7YTpa2irE9oMWy+GwQc2vuxQRzCTpimuJ4pXKAxKn1BNx8T5C/9xdqGGsfICdoeYTR7LVCR5yjAmDPNTvGoALEKXl+c0sHN3DdRpxA9GdT+PsQfPRIaR5l/f1r8d4GZf62OKPpMzv9uqlEALPSqGAw/SFa0qJHx1rJPv1xSRcKWybR8o7n9IHkSLv5C2a2aJSPQRtsXbv41QJbFceWWgfRqUy5b868tlXJGbubMGaCrTGFT/qSyvWqNnd+mfKtbRHYX+JyDqd1e5P4z7BDqZL/m4LG8ke4grbS7lYqUB4La6WFhqqZfOM/dXb232Tn5WDamT+GpucDKe0FOVzYIsYc9TKpivf1b4yJLau0UqdJZWD1iZiN00BkYilAQ5uGpIFxBSo3GHozfGqXCi5XPlmwJ8+tgSNnLhynSszO6WHMhXzq1gMCiZ6pZDA5hyBEOg//mxM7Q/cIu9Yj5HLlGTlNicOmfWIqOiwG3iDUNgHVgiWoo6CFpNK9N2XyEEIf59ZzGH3vQw/gno=",
+      "nonce_b64": "Erlokn3dLwdWB3iG",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAyXII8CqmZtwjE2ROLqWjUHrenhKSpTbOBxCirLZY/yI=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0016"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_FI_TYPE_UNAUTHORIZED",
+      "expected_error_substring": "is not within consented fiTypes",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000016",
+          "Synthetic Citizen 0016",
+          "SYNTH0016Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0017",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "GSTN",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0017",
+        "consentId": "consent-aikosh-0017",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.229395Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:01.229395Z",
+          "consentExpiry": "2026-11-21T20:28:01.229395Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..dsOlCJGGHmO3kV6TLrkvM3-o99JvgJ0Oba6KF9vK2DXNlmlEw8fDoLi_yPysHxbuq3se0qYWzqfU92S6I0BYK4zXtyGAo02VQTSNaZfHLJHYiwI5I82Utg7pmc2tezML5BjfEyyTtrPZHElU3uYyJI3AhJqVhhhZQsu_GBDg9snWgS-65qvqpN1QSsGnBWbINIZrDKF5q5ZbnGLMuVuzvqOyIpVZrh8MJVdyIPcGhfSvCbFLmeGXTdUyRJVGzO1Ra7h4I8Pu5zVnvHKKefMd9Ul37O9JzXY5v-IVFAcahB3_A5LfNRzarKU9ysRv64Cl7BXw85nPCVdNVnIhO688BQ",
+      "encrypted_fi_payload_b64": "RH88+IhspqffK0npdefb17oGEfYmcXnHat9XycMJuHCKBGc6uOQx1zh9AjWNkgBgZ4MSjq1ugPXfkngSDX06q0u6YdPZ/TenTymtyHaWC55f1RjK5K7EO3+icjS/J3cstyG1I+03yL4Cb2O3HFbmBVs5xivfXWxq1hBHbmPoXRXN3+2kv0QdDWDcNfAyBy7qwaHN2DsUkrhIVq5wk3O+s/KuOAojhgEtQmgySD18SIwk5TGgc6WYVZAlvRgV2hQhl91CdVREhytRqekeTL0zyCZ3ZE74VeZ4nf9ufCNGeLFZKdUcCtjAxqiO7UGMVXa8dWz6gZ0nNhJ6MY5NmVHxwTfBunZgpqsIPvoST+8E36snpptbiscING+hlS5KuXffheakBQY7tlTxdEdS7vnJETQ/4aR+rdBhKVuIgVlY4U9B9xXI/RWvWlBZNfP0IUdG6Tfk4rNMBc3IeAy766z75s7EbeOxrIRIwdzQEgG5S5dG/NDmR5YVZ8bNknREODpyuHdNmadbAeSIb10awXN1xgmOH2+OzWEr7u3Sw0VMOGIgogUAxcXP3gWqlXdCphvSA/GXZMFrnw2x2sXcoKJXgtgbsVPx2zMIACRpkAKRnueGTCzi8/rvrLP1TPuLxxDTVxJVdvVCPJXllh129WVPAlRrW3CYma5xylj/yF0+D6F494fx15mOB+hHAli1qPDUhN++t1hSMZ8S3XujIxCraVlp1dKxgmc9QLBF15bzPgAlFaxUGmaOw3GkI410OrJjK/XqcXoPNG7SQJS3w/Xf4dV5aEyVLydZY76YoqADqRWfpvuv0torUlO256Dk6vHlCXSfrP/7Ags4J1+v4OSxTjZAlS8UvvuG9qzP+NkST9ksWPEN5BUvMYgwZhkZGxgpMJKzpt/g5XkbzbipksKdDAov1UOg9CrfT6BEk/J+XJVaVP2s3aNH7pYD9CaK3g+UhCztnSOnu+58d04S4ei7yBjbNbuxus+rHzckNXqLS2vQiOpY",
+      "nonce_b64": "9FTgpbYsIPIyrQDK",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEA6pE29YbYjVp4TbjA3Zptv8wZIzqY+Dhjq4MNdxmMnjk=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "GSTN",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0017"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_turnover": 560422.08,
+        "total_taxable_value": 478023.49,
+        "total_invoices": 3,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "99SYNTH0017Z1Z5",
+          "Synthetic Enterprises 0017",
+          "SYNTH0017Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0018",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0018",
+        "consentId": "consent-aikosh-0018",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.433264Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:01.433264Z",
+          "consentExpiry": "2026-11-21T20:28:01.433264Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..gY1dgHwTyoD5Ez1mC2ieWUzDE2Hm8ZKm7-bUKcApSSIHKqY3PRlKC7ltl8iAi5tsKNzYWmcIB7YlTMlEc1dlK0KbhL3pK9-rN2ar6UJ0QxM0FFSzmxffGIaW187lD6EEDeRwosm6urg_3QE6UP4yOglSMRMXT0JqJgKwIxAGLEASFL6izMBXTz5yH8E_Tn8OSFoiKczwIWDUGQ0Aawa0rCymQtGbRzdaNWgteBPLmi-A4DgZs5EEwV0Um7agqwJNOF_g-EhLYmSC1oq0g3-4dnQC9sPhA1C5Rfkg4KLtYcahwKCaCapfGsQRU0a4_2fqFPNK3xhefFWHjVLX3tTzkg",
+      "encrypted_fi_payload_b64": "DshtYqrQeLC90bBWiIdanhcEYI+P66t8Cbur0vc1PNqKXsPiQhzCwLpJb+QHlaP1tyip18weiHLiT4HDb6LmDUpmAJLPjdKk5DSmjbk5TUuiPH/2wfiwGoh/ZYExWTpeXi4FPrzBX1I/K4m3IURwlVlWPdZxU/WGu0DlLoRUMq/2gHKM30/oIrFqf1HaEllFvGkEAPf+kZO7KiOi5x5fBTc9LqoNHgn0HG5hzlRLIrBQFmnMd71VbgljTD71rVmptlsLnwrDtIQ+XGPVBhdermcY/lplPyXezTlY9LqdbnBofAfv72PadkruyZY35COb6zaEv6IB0SeA1QiiFc3DTaNTJF/0sg4MrBtwD4Dz4qdTgtdXMntR0Lnx2tJtmbZb76uNaH315ktX7Begn1ziDyC6vbPxBiDoz0DMk/LVmfYzxU4Xqtzequqe/XIYiOdsREQzY5inlDiYFYxn18wCxqbVsRan0zLu/D5TQO/z/rIQAtGhOqp/3G5KfOryteUcDWcdfnwPDM6Mcy6E8mVr+nSwcyQaapTXsK3Vs9awL2hq1AKka+dhB65zeeZLsQeG84q96UGcbiBIO2r6",
+      "nonce_b64": "t4V6feqEQi2wFAXm",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAtWrPlUwUdJ4RUqTg/oXbBQ9qynA2p2GRw01TNijJKUQ=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0018"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "tier1_contributions": 30832.89,
+        "tier2_contributions": 26542.14,
+        "total_nps_contributions": 57375.03,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000018",
+          "Synthetic Citizen 0018",
+          "SYNTH0018Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0019",
+    "category": "VALID_AUTHORIZED",
+    "fi_type": "DEPOSIT",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0019",
+        "consentId": "consent-aikosh-0019",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.613204Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-21T17:58:01.613204Z",
+          "consentExpiry": "2026-11-21T20:28:01.613204Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..L-zdzF0upoVCIqltMH9dtt_gOPyq3H6g2USyZm93NPQqlkDw44MjRn_yBvjq6FKcBTxoqRZap_tpAmeH9iu6Rmb6auQgVBW5irD4PynmEb_gNjH1KzJO1hPEjvD2_UZvCXOnI77H-R94p1OfbghJz3ymjSVMP79w4QUmISFKbkjCIm_92zkyDlIch2rFyajZkTbu2Doi_M5mXSMKBmObXxgLTLH0sydhVOcRmpjkwYUlotMykEgWl-AcdTwKvmzUmdMxOOTMKMv5ICU9IJpUIfoBVQkkMVV4Oi2o48EBprGtEqw_Nj4wPcDUdxwmB3cZGfBcLpMHH48Ata9w24eVgg",
+      "encrypted_fi_payload_b64": "WjM+3CQh5k3oVzWWOxcYpVXoS0pFGB8YX6p/OHZgGX30psGf4OzpisfGuUgxwFhDqhIg584YPhrGx2OsVdzOPL/rPMsx8i13UONFNZe/NgYtVm2QsPtp1Rb+ayxnwo+xF191djRb1GPZUP3PTvy3HCy2h3CIYbBv1q3l3IzgMoF0nkwv/ndbY7ly0KqbDOzBIuYpxt5AgcxgfWsXaqYZ+NT7TwfOMkt7nrChuCft2POuOxkIDlHGZuiIxZyVFbnengJ5i5hAR4sRCsCwJ1PdQG4X9p6wnVGcK6421lHLn8JdzbmmsKDez7cynkB206yhvUxueF7eLxxz30f1WeW2mNPlSJ4xxF+TAsSCDDRuMdW26WdU0ym/B3rINmOkn7lnF9a2bH3YXoNYdPN1vyNlGlAt9qqRBd+AqaXbrPvDAGaddUY+f5nb7nJ1K8Y7EelAr39ebb0SER0ZxJ0zSDCexwlv1VnA/itoK/0H9Gwhos4NGxdl2LQNRv85W9PMbhPPFeocoFP8hVYcvISAQe8xl+PXDWxqPTHzBa4qogOJMqubZDEzaXLyeEH1YMFIag8Q30LjtEoBSrRr7gzl+/RoyV0YPfefP1ms7PR3V52wsPXIaOOAoS3EDPIkqKaCpac4NCIX2lmjsdCYNMDNgHIlcUovGpsrxILkiZxCF5FQmJU+Ni1cs8YnJ/YTxtDBOBTdov1sBDI15cpEzD1B76s09V3d8OHYpuLK+cOuDl50cUnxRxiEk/rRYaSph8qSGtS92QZpcywpyQUKQNMtwzl+8YUmEL2OBs1f/DfOD0AUKXUFt1J9PlbokY9ma/1t8VLHd2AvAMKLcG18XxWP680V+uHpTo0g3e5avB8jcU2O72UXWY8x63tyDTTVcMnoNEA9JXFKW9uxIuznz01os/led7EzDfkhvYCzsSSRbdG+iYGWcI12r8xx+qOIQi25y1a21GEXRq+zS8WPdNJAKffkiEOHgERgGslGrJaRUtEgp3dXMQhY5L80g9MDmQL8zuiLzMlnPCMoUwJdz9XLhXFfldbFfpep33KzoSxdfpUzvtXp02R1UxTD+LHXh5OlI9MIsYOSVwGmb59RvBIAWvXDxOeArGNs",
+      "nonce_b64": "HWtQngwZZ3ceTttl",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEAcHLk9oTDSUZexMYu+gmqTfUu6tafXXs58QY2OrdYLwo=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "DEPOSIT",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0019"
+    },
+    "ground_truth": {
+      "expected_status": "APPROVED",
+      "expected_error_substring": null,
+      "expected_metrics": {
+        "total_inflow": 321157.86,
+        "total_outflow": 9894.94,
+        "net_surplus": 311262.92,
+        "credit_transactions": 3,
+        "debit_transactions": 2,
+        "currency": "INR",
+        "retention_status": "ZERO_PII_RETAINED_EPHEMERAL_COMPUTED"
+      },
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "Synthetic Citizen 0019",
+          "SYNTH0019Z",
+          "XXXXXXXX0019"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  },
+  {
+    "test_id": "SACP-BENCH-0020",
+    "category": "EXPIRED_TEMPORAL_WINDOW",
+    "fi_type": "NPS",
+    "input": {
+      "consent_artefact_json": {
+        "ver": "2.0.0",
+        "txnid": "txn-aikosh-0020",
+        "consentId": "consent-aikosh-0020",
+        "status": "ACTIVE",
+        "createTimestamp": "2026-11-21T17:53:01.791081Z",
+        "signedConsent": "dummy.jws.header.payload.signature",
+        "consentDetail": {
+          "consentStart": "2026-11-19T18:28:01.791185Z",
+          "consentExpiry": "2026-11-21T15:28:01.791185Z",
+          "consentMode": "VIEW",
+          "fetchType": "ONETIME",
+          "fiTypes": [
+            "DEPOSIT",
+            "GSTN",
+            "NPS",
+            "TERM_DEPOSIT"
+          ],
+          "purpose": {
+            "code": "101",
+            "refUri": "https://api.rebit.org.in/purpose/101.xml",
+            "text": "Autonomous Assessment & Underwriting",
+            "Category": null
+          },
+          "filters": [],
+          "dataConsumer": {
+            "id": "SACP-EVAL-FIU",
+            "type": "FIU"
+          },
+          "dataProvider": {
+            "id": "SYNTHETIC-BANK-FIP",
+            "type": "FIP"
+          },
+          "customer": {
+            "id": "synthetic.user@aa-sandbox"
+          },
+          "dataLife": null,
+          "frequency": null
+        }
+      },
+      "detached_jws": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..ggaUsbrVkxvS7v8dWvQl_Wf-ziNCKQrjhhSVfaeodjhjoFn8g1hwOhORDo969nL-BxiWiGWQ7Zykce-yzHtVahcfVa3NefUbwmdLNBIWBisbCSesAgq4argRtT7sAX3WxkJ5OpkUFH_LPIyA-XDXo6WL2t2yXwU71mOsoTxvJjHpjvVJS2dqg6nlpdnrb0Pda6QFSz220tIFISEGPsbySa9JOzzF9yGSf6bBt0_UxcKd0o2bgoFC0arl8Q7XP-FVpIMA_CRhw-PrdIqan9l1pmZe9KUW_Gknb0gAdB11ce5NUf_40SOotPGRCu_qRF2irm04npeqBTlFrVlAPQkKKA",
+      "encrypted_fi_payload_b64": "/tH5X87eMZA5MPS0hGOGhyxElyIswbtPUavZ+Oh56WPupWbLFzi2/sP4/sxS9ttAlIKBeveZpHB660zcK03QnqQEAg7TaLB2DpueNxpW5203vBIGKHIWgwFklbwZ3XtEgS5mZs76o2mZqpJI4CZFe1P/ZodcwZGX4L3yz6zMLlbOegy3E9GV3xJtL41Zy3eQjwdZozVAujsXWflVbVwU2l6ByDsqaoZxhKk7AeS2Tk4FCK3uuf+OsbWvhfXlI+7C9R8KwAyNmE5Vn/LSdqpw66JQQRxvV8+tEcP8lXXRzJS7ssrQKex8XdWtdXRydgzrFd8Qriy7oYgj1nJqNFqjGBlwb4w3JiiIB0rmReEnLYi1PDKSt7pdWZxpGLoYsgtahCVtTwhmIguB+7ZP2+IrLe3OPZWHPWw3ACdu06Q64RixmCE/+xu2y2Mcwfz8oTWNBmIORnkEROfurbU+IVn9SsjxazYelbm8nqD7PWOIqwiXThjChajMFoy6WOq3v+crKKt/vjZlQ1IDYAdKcXYtIBkKXgS2U665qvtb2/vuZPWv9gdd9WZcp5xm2pKaKApCD/H+j27rwTA8ujP+1x4U1Ulkyw8IA3NFicUCFtRLH6s7qoy0FUi9c52OtVJmybeZZyFPiEqpOdOdvSj/WnI4EhF8NLbPD9RUzi4F/X6pQENaOXFhBcHgyBeS0w8wl0qCWKuZ11LOnzb4xM6SzZAAAL4ITsXQQFQXGD2tNgyGwt77pe9C8xvuJWhFvogW",
+      "nonce_b64": "b8Aw++FVZb4dLsZY",
+      "fip_ephemeral_public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VuAyEA9amZeORRt6lNBtzYFO0fgJLPHOEMvJSdWR5KHS7XYEI=\n-----END PUBLIC KEY-----\n",
+      "fiu_private_key_pem": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VuBCIEIHhv9yKBvK3kijQDKX74DyNTbqvthgyawp9BC3Jqt31g\n-----END PRIVATE KEY-----\n",
+      "requested_purpose_code": "101",
+      "requested_fi_type": "NPS",
+      "is_revoked_live": false,
+      "agent_id": "aikosh-eval-agent-0020"
+    },
+    "ground_truth": {
+      "expected_status": "DENIED_CONSENT_EXPIRED",
+      "expected_error_substring": "Consent expired",
+      "expected_metrics": null,
+      "zero_pii_retained": true,
+      "synthetic_pii_check": {
+        "must_be_absent": [
+          "990000000020",
+          "Synthetic Citizen 0020",
+          "SYNTH0020Z"
+        ]
+      }
+    },
+    "metadata": {
+      "rebit_interop_version": "2.0.0",
+      "dpdp_regulatory_anchor": "DPDP_ACT_2023_SECTION_6",
+      "synthetic_provenance": "100%_SYNTHETIC_DETERMINISTIC",
+      "seed": 42
+    }
+  }
+]

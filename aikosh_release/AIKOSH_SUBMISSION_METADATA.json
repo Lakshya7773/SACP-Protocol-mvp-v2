@@ -1,0 +1,74 @@
+{
+  "$schema": "https://aikosh.indiaai.gov.in/schemas/v1/dataset-metadata.json",
+  "dataset_id": "aikosh-ds-sacp-rebit-dpdp-v0.2",
+  "title": "SACP-ReBIT-DPDP: Synthetic Sovereign Consent & Multi-FI Agentic Benchmark",
+  "version": "0.2.0",
+  "release_date": "2026-11-21",
+  "publisher": "SACP Protocol Contributors",
+  "sector": "FinTech / Digital Public Infrastructure / AI Governance",
+  "domain": "Account Aggregator Ecosystem & Sovereign Context Protocol",
+  "language": "en",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Lakshya7773/SACP-Protocol-mvp-v2",
+  "regulatory_frameworks": [
+    "Reserve Bank of India (RBI) / ReBIT Technical Standards v2.0.0",
+    "Digital Personal Data Protection (DPDP) Act, 2023 (Section 6, Section 8)"
+  ],
+  "provenance": {
+    "type": "100% Synthetic Deterministic",
+    "seed": 42,
+    "pii_audit_status": "PASSED",
+    "zero_real_personal_data": true,
+    "scanned_for": [
+      "Aadhaar numbers (Verhoeff check)",
+      "Real PAN card formats",
+      "Real Indian phone numbers (+91[6-9]...)",
+      "Unmasked banking account numbers"
+    ]
+  },
+  "dataset_metrics": {
+    "total_evaluation_samples": 500,
+    "format": "JSONL",
+    "total_valid_authorized_samples": 250,
+    "total_adversarial_violation_samples": 250,
+    "fi_type_distribution": {
+      "DEPOSIT": 195,
+      "GSTN": 165,
+      "NPS": 140
+    },
+    "category_distribution": {
+      "VALID_AUTHORIZED": 250,
+      "TAMPERED_DETACHED_JWS": 50,
+      "CITIZEN_LIVE_REVOKED": 50,
+      "EXPIRED_TEMPORAL_WINDOW": 50,
+      "PURPOSE_CODE_MISMATCH": 50,
+      "UNAUTHORIZED_FI_TYPE": 25,
+      "DISALLOWED_STORE_MODE": 25
+    }
+  },
+  "intended_tasks": [
+    "Autonomous AI Agent Regulatory Compliance Auditing",
+    "Model Context Protocol (MCP) Streamable HTTP Security Verification",
+    "Zero-Retention Ephemeral In-RAM Compute Evaluation",
+    "DPDP Act Section 6 Purpose Limitation & Revocation Enforcement"
+  ],
+  "files": [
+    {
+      "name": "sacp_rebit_dpdp_benchmark_v0.2.jsonl",
+      "description": "Complete 500-sample evaluation benchmark with inputs and ground-truth expectations.",
+      "format": "application/x-jsonlines",
+      "count": 500
+    },
+    {
+      "name": "sample_preview.json",
+      "description": "Formatted 20-sample preview for immediate inspection.",
+      "format": "application/json",
+      "count": 20
+    },
+    {
+      "name": "DATASET_CARD.md",
+      "description": "AIKosh standard dataset card with schema definitions, ethical statement, and evaluation harness.",
+      "format": "text/markdown"
+    }
+  ]
+}

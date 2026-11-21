@@ -40,6 +40,8 @@ class FIType(str, Enum):
     INSURANCE_POLICIES = "INSURANCE_POLICIES"
     GSEC = "GSEC"
     EQUITIES = "EQUITIES"
+    GSTN = "GSTN"
+    NPS = "NPS"
 
 
 class PurposeCategory(BaseModel):
